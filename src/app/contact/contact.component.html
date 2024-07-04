@@ -1,0 +1,72 @@
+<section class="hero is-small is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+      <h1 class="title" style="color: black;">Contact Me</h1>
+    </div>
+    </div>
+</section>
+
+<section class="section">
+<div class="columns is-centered">
+<div class="column is-four-fifths">
+
+<div class="container">
+
+  <!-- Contact form -->
+  <form (ngSubmit)="submitForm()" method="POST" #contactForm="ngForm">
+    <!-- Name -->
+    <div class="field">
+      <label class="label">Name
+      <input 
+        type="text" 
+        name="name"
+        placeholder="E.g. Rick" 
+        class="input" 
+        [(ngModel)]="name"
+        #nameInput="ngModel"
+        required>
+      </label>
+      <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+        Name is required
+      </div>
+    </div>
+    <!-- Email -->
+    <div class="field">
+      <label class="label">Email
+      <input 
+        type="email" 
+        name="email"
+        placeholder="E.g. example@email.com" 
+        class="input" 
+        [(ngModel)]="email"
+        #emailInput="ngModel"
+        required
+        email>
+      </label>
+      <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
+        Email is required and needs to be a valid email
+      </div>
+        
+    </div>
+    <!-- Message -->
+    <div class="field">
+      <label class="label">Your Message
+      <textarea 
+        name="message" 
+        class="textarea"
+        placeholder="Type your message here"
+        [(ngModel)]="message"></textarea>
+      </label>
+    </div>
+    <!-- Button -->
+    <button 
+      type="submit" 
+      class="button is-warning"
+      [disabled]="contactForm.invalid">
+        Send
+    </button>
+  </form>
+</div>
+</div>
+</div>
+</section>

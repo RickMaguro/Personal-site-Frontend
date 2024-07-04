@@ -1,0 +1,28 @@
+<div class="modal is-active">
+    <div class="modal-background" (click)="cancel()"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">{{project.name}}</p>
+        <button class="delete" aria-label="close" (click)="cancel()"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Carousel for project images -->
+        <div class="carousel">
+            <div *ngFor="let picture of project.pictures">
+                <img src={{picture}} alt="Slide" />
+            </div>
+        </div>
+        <!-- Content -->
+        <p [innerHTML]="project.description"></p>
+        <hr>
+        <p>Find out repository of this project! <a href={{project.projectlink}}>Here</a></p>
+      </section>
+      <footer class="modal-card-foot">
+        <div class="tags are-medium">
+          <div *ngFor="let tag of project.tags">
+              <div class="tag is-rounded" [style.background-color]="tag.colour">{{tag}}</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+</div>

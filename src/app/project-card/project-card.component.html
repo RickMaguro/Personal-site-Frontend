@@ -1,0 +1,23 @@
+<!-- Modal control -->
+<app-project-modal *ngIf="showModal" [project]="project" (onClose)="closeModal()"></app-project-modal>
+<!-- Card section -->
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">{{project.name}}</p>
+        <button class="button is-link is-inverted" (click) = "selectItem()">View More</button>
+    </header>
+    <div class="card-content">
+        <div class="content">
+        {{project.summary}}
+        </div>
+    </div>
+    <footer class="card-footer">
+        <div class="container">
+            <div class="tags are-medium is-centered">
+                <div *ngFor="let tag of project.tags">
+                    <div class="tag is-rounded" [style.background-color]="tag.colour">{{tag}}</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

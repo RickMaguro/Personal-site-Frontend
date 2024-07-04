@@ -1,0 +1,24 @@
+<!-- Header -->
+<section class="hero is-small is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+        <h1 class="title" style="color: black;">Projects</h1>
+    </div>
+    </div>
+</section>
+
+
+
+<!-- Set the template for projects-->
+<div class="columns is-centered">
+    <div class="column is-four-fifths">
+        <div class="container">
+            <div class="grid is-col-min-12 is-column-gap-3">
+                <!-- Projects -->
+                <div *ngFor="let project of projects" class="cell">
+                    <app-project-card [project] = "project"></app-project-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

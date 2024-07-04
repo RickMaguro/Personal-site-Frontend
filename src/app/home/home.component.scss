@@ -1,0 +1,20 @@
+// .hero{
+//     background-image: url('/assets/Images/Sea-background.jpg');
+//     background-size: cover;
+//     background-position: center center;
+// }
+
+.image{
+    width: 300px;
+    height: 300px;
+}
+
+.columns {
+    height: auto;
+    background-image: url('/assets/Images/diamond1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-bottom: 20px;
+  }

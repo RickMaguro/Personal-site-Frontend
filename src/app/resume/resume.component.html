@@ -1,0 +1,165 @@
+<section class="hero is-small is-primary is-bold">
+    <div class="hero-body">
+    <div class="container hero">
+      <h1 class="title" style="color: black;">Resume</h1>
+    </div>
+    </div>
+</section>
+
+<div class="columns main is-centered">
+<div class="column is-four-fifths">
+  <div class="accordion">
+    <div class="accordion-item" *ngFor="let item of items; let i = index">
+      <header class="accordion-header">
+        <button class="button is-fullwidth is-warning" (click)="toggleAccordion(i)">
+          <strong>{{ item.title }}</strong>
+          <span class="icon angle">
+            <fa-icon style="font-size: 20px;" [icon]="item.isActive ? faMinus : faAngleDown"></fa-icon>
+          </span>
+        </button>
+      </header>
+      <div class="accordion-content" [ngClass]="{'is-active': item.isActive}">
+        <div class="box">
+          <ng-container *ngTemplateOutlet="item.template"></ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Custom templates for each accordion item.content -->
+<ng-template #template1>
+  <h1 class="title is-4 is-spaced">Data Analyst / Director<span style="float: right; font-size: 16px;">Sep 2017 - Jun 2022</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    ShinTianDi Television Co Ltd.,  Taiwan
+  </h2>
+  <ul>
+    <li><u>Curated</u> - Oversawing TV programming and conducted data analysis to ensure seamless content delivery and identify customer trends, contributing to strategic decision-making and commercial growth.</li>
+    <li><u>Collaborative</u> - Establishing robust communication channels among cross-functional teams, including engineers, producer, and stakeholders, to ensure alignment on project objectives and operational requirements.</li>
+  </ul>
+  <h3><strong>Accomplishments</strong></h3>
+  <ul>
+    <li><u>Innovative</u> - Led initiatives such as creating a custom Excel <b>VBA</b> tool to optimise processes and implementing data-driven marketing strategies, which boosted productivity and profits.</li>
+  </ul>
+  <hr>
+
+  <h1 class="title is-4 is-spaced">Investor<span style="float: right; font-size: 16px;">Feb 2018 - Apr 2022</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    Ju Yuan Japanese Cuisine, Taiwan
+  </h2>
+  <ul>
+    <li><u>Analytical</u> - Conducted statistical analysis to optimise financial strategies and implemented robust data management practices for informed decision-making and regulatory compliance.</li>
+  </ul>
+  <h3><strong>Accomplishments</strong></h3>
+  <ul>
+    <li><u>Strategic</u> - Establishing robust communication channels among cross-functional teams, including engineers, producer, and stakeholders, to ensure alignment on project objectives and operational requirements.</li>
+  </ul>
+  <hr>
+
+  <h1 class="title is-4 is-spaced">Specialised Teacher of Computer Science<span style="float: right; font-size: 16px;">Sep 2016 - Jan 2017</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    Chong De Elementary School, Taiwan
+  </h2>
+  <ul>
+    <li><u>Informative</u> - Instructed 6th-grade students in programming concepts and empowered 5th-grade students with GNU Image Manipulation Program (GIMP) instruction, fostering their skills within a Linux environment. These experiences greatly bolstered my familiarity with <b>Linux</b> systems.</li>
+  </ul>
+  <h3><strong>Accomplishments</strong></h3>
+  <ul>
+    <li><u>Commended</u> - Streamlined semester course planning, bolstering student comprehension and mastery of computer knowledge, earning commendation and accolades from the director of educational affairs.</li>
+  </ul>
+  <hr>
+
+  <h1 class="title is-4 is-spaced">Substitute Military Serviceman (Education Field)<span style="float: right; font-size: 16px;">Oct 2015 - Aug 2016</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    Chong De Elementary School, Taiwan
+  </h2>
+  <ul>
+    <li><u>Web-literate</u> - Managed the school database for data integrity and security, while also maintaining the website using <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>, enhancing both administrative operations and digital presence.</li>
+  </ul>
+</ng-template>
+
+<ng-template #template2>
+  <h1 class="title is-4 is-spaced">MS Degree in Computer Science<span style="float: right; font-size: 16px;">2022 - 2023</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    University of Bath
+  </h2>
+  <ul>
+    <li><u>Disertation</u> - "The Effect of Personality Traits, Emotions, Agency, and Graphics on Presence in Virtual Reality"</li>
+  </ul>
+  <hr>
+
+  <h1 class="title is-4 is-spaced">MS Degree in Psychology<span style="float: right; font-size: 16px;">2013 - 2015</span></h1>
+  <h2 class="subtitle" style="color: rgb(0, 145, 255);">
+    National Chung Cheng University (Taiwan)
+  </h2>
+  <ul>
+    <li><u>Disertation</u> - "The Impact of Sadness, Anger, and Stimulus Onset Asynchrony (SOA) on the Activation of Gender Stereotypes"</li>
+  </ul>
+</ng-template>
+
+<ng-template #template3>
+<div class="columns skills is-centered is-8">
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <p class="title is-4">Programming Languages</p>
+          <hr>
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: steelblue;" [icon]="faPython"></fa-icon>
+          </span>Python
+          <!-- Space -->
+          &nbsp;&nbsp;&nbsp;
+          <span class="icon">
+            <img src="\assets\Images\Csharp.png" alt="C#" />
+          </span>C#
+          <!-- Space -->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: steelblue;" [icon]="faJava"></fa-icon>
+          </span>Java
+
+          <br><br><br>
+
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: tomato;" [icon]="faHtml5"></fa-icon>
+          </span>Html
+          <!-- Space -->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: royalblue;" [icon]="faCss3Alt"></fa-icon>
+          </span>CSS
+          <!-- Space -->
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: gold;" [icon]="faJs"></fa-icon>
+          </span>JavaScript
+
+          <br><br><br>
+          <span class="icon">
+            <img src="\assets\Images\Sqlite.png" alt="Sqlite" />
+          </span>Sqlite
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column is-half"> 
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <p class="title is-4">Framework</p>
+          <hr>
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: dimgrey;" [icon]="faUnity"></fa-icon>
+          </span>Unity
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="icon">
+            <fa-icon style="font-size: 20px; color: crimson;" [icon]="faAngular"></fa-icon>
+          </span>Angular
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>
