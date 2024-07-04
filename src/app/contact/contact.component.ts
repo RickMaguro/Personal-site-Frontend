@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -11,8 +12,9 @@ export class ContactComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  loading: boolean = false;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private elementRef: ElementRef) {}
 
   submitForm() {
     const emailData = {
@@ -21,8 +23,11 @@ export class ContactComponent {
       message: this.message
     };
 
-    // Endpoint URL - Change to your server's URL when deployed
-    const endpoint = 'http://localhost:3000/send-email';
+    // Endpoint URL
+    const endpoint = `${environment.apiEndpoint}/send-email`;
+
+    this.loading = true; // Set loading state to true
+    this.elementRef.nativeElement.querySelector('.button').classList.add('is-loading'); // Add is-loading class
 
     this.http.post(endpoint, emailData)
       .subscribe({
@@ -33,6 +38,10 @@ export class ContactComponent {
         error: error => {
           console.error('Failed to send email', error);
           alert('Sorry, something went wrong. Please try again later.');
+        },
+        complete: () => {
+          this.loading = false; // Set loading state to false regardless of success or error
+          this.elementRef.nativeElement.querySelector('.button').classList.remove('is-loading'); // Remove is-loading class
         }
       });
   }

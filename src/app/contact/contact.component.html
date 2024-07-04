@@ -62,8 +62,9 @@
     <button 
       type="submit" 
       class="button is-warning"
-      [disabled]="contactForm.invalid">
-        Send
+      [class.is-loading]="loading"
+      [disabled]="contactForm.invalid || loading">
+      Send
     </button>
   </form>
 </div>
