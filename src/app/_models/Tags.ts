@@ -6,7 +6,7 @@ export class Tag{
     static readonly UNITY = new Tag('Unity', 'DarkGrey');
     static readonly ANGULAR = new Tag('Angular', 'Crimson');
     static readonly CSHARP = new Tag('C#', 'MediumPurple');
-    static readonly PYTHON = new Tag('Python', 'SteelBlue');
+    static readonly PYTHON = new Tag('Python', 'DodgerBlue');
     static readonly JAVA = new Tag('Java', 'HotPink');
     static readonly SQLITE = new Tag('SQLite', 'LimeGreen');
     static readonly TYPESCRIPT = new Tag('TypeScript', 'Turquoise');

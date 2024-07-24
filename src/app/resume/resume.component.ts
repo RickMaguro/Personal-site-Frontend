@@ -16,7 +16,7 @@ export class ResumeComponent implements AfterViewInit{
   items = [
     { title: 'Work Experience', isActive: false, template: null as TemplateRef<any> | null },
     { title: 'Education', isActive: false, template: null as TemplateRef<any> | null },
-    { title: 'Skills', isActive: false, template: null as TemplateRef<any> | null }
+    { title: 'Skills', isActive: true, template: null as TemplateRef<any> | null }
   ];
 
   @ViewChild('template1') template1!: TemplateRef<any>;
