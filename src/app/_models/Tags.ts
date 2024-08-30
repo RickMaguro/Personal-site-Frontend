@@ -12,6 +12,7 @@ export class Tag{
     static readonly TYPESCRIPT = new Tag('TypeScript', 'Turquoise');
     static readonly HTML = new Tag('HTML', 'DarkOrange');
     static readonly CSS = new Tag('CSS', 'SkyBlue');
+    static readonly DJANGO = new Tag('Django', 'LightGreen');
 
     toString(){
         return this.key;

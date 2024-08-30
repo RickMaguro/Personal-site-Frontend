@@ -67,6 +67,26 @@ export class ProjectsService {
     projectlink: '',
     tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
     pictures: []},
+
+    {id: 6,
+      name: 'Tasks management web app',
+      summary: 'This project is a secure, web-based task management application with user authentication, allowing users to add, manage, and report on tasks through a series of password-protected pages.',
+      description: `
+      <p>Welcome to the Task Management App, a secure and efficient platform designed to help you manage and monitor your tasks effectively. This application is built with <strong>Django</strong>, a high-level Python web framework known for its security, scalability, and rapid development capabilities.</p>
+      <br>
+      <h2><b><u>Key Features:</u></b></h2>
+      <ul>
+        <li><strong>Secure Access:</strong> The application utilises Django's robust authentication system, ensuring that only authorized users can access task management and reporting features, thereby protecting your sensitive data.</li>
+        <li><strong>Task Management:</strong> Users can add new tasks with comprehensive details including email, task description, due date, priority level, and urgency. The process is streamlined to ensure quick and accurate task entry.</li>
+        <li><strong>Interactive Dashboard:</strong> The dashboard offers a detailed overview of tasks due in the next 30 days, featuring dynamic charts and tables powered by Django, helping users prioritize and manage their workload effectively.</li>
+        <li><strong>Data Integrity:</strong> Built on Django’s reliable ORM (Object-Relational Mapping), the application ensures data integrity and consistency, providing users with accurate and up-to-date task information at all times.</li>
+      </ul>
+      <br>
+      <p>This Task Management App not only simplifies your task organization process but also demonstrates the capabilities of Django in building secure, scalable, and interactive web applications. Whether you're managing individual tasks or overseeing a team, this app is designed to help you stay organised and efficient.</p>
+    `,
+      projectlink: 'https://github.com/RickMaguro/Tasks_management_app',
+      tags: [Tag.DJANGO, Tag.PYTHON, Tag.SQLITE],
+      pictures: ["/assets/Images/Tasks Management Home.png","/assets/Images/Tasks Management Login.png", "/assets/Images/Tasks Management Tasks.png", "/assets/Images/Tasks Management Dashboard.png"]},
   ];
   
   constructor() { }
