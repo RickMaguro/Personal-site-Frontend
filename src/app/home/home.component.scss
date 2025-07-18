@@ -18,3 +18,12 @@
     min-height: 100vh;
     padding-bottom: 20px;
   }
+
+.profile-image {
+  width: 256px;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 228px;
+  }
+}

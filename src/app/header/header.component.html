@@ -1,53 +1,45 @@
-<div class="navbar">
-    <!--Logo-->
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <!-- Logo + Burger menu -->
     <div class="navbar-brand">
-        <figure class="image" routerLink="/home">
-            <img src="assets\Images\weiyu_logo.png" />
-        </figure>
+      <a class="navbar-item" routerLink="/home">
+        <img src="assets/Images/weiyu_logo.png" alt="Logo">
+      </a>
+  
+      <!-- Burger button -->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-
-    <!-- Menu -->
-    <div class="navbar-menu">
-    <div class="navbar-start">
-        <a class="navbar-item" routerLink="/home" >Home</a>
+  
+    <!-- Dropdown content -->
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" routerLink="/home">Home</a>
         <a class="navbar-item" routerLink="/portfolio">Portfolio</a>
         <a class="navbar-item" routerLink="/resume">Resume</a>
         <a class="navbar-item" routerLink="/contact">Contact</a>
-
-    </div>
-
-    <!-- Buttons of Linkedin, Github, Bitbucket -->
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-            <a href="https://linkedin.com/in/wei-yu-chang" target="_blank">
-                <button class="button is-link">
-                    <span class="icon">
-                        <fa-icon style="font-size: 20px;" [icon]="faLinkedin"></fa-icon>
-                    </span>
-                    <span>Linkedin</span>
-                </button>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-link" href="https://linkedin.com/in/wei-yu-chang" target="_blank">
+              <span class="icon"><fa-icon [icon]="faLinkedin"></fa-icon></span>
+              <span>Linkedin</span>
             </a>
-            
-            <a href="https://github.com/RickMaguro" target="_blank">
-                <button class="button is-dark">            
-                    <span class="icon">
-                        <fa-icon style="font-size: 20px;" [icon]="faGithub"></fa-icon>
-                    </span>
-                    <span>Github</span>
-                </button>
+            <a class="button is-dark" href="https://github.com/RickMaguro" target="_blank">
+              <span class="icon"><fa-icon [icon]="faGithub"></fa-icon></span>
+              <span>Github</span>
             </a>
-
-            <a href="https://bitbucket.org/rick-project/workspace/overview/" target="_blank">
-                <button class="button is-info">
-                    <span class="icon">
-                        <fa-icon style="font-size: 20px;" [icon]="faBitbucket"></fa-icon>
-                    </span>
-                    <span>Bitbucket</span>
-                </button>
+            <a class="button is-info" href="https://bitbucket.org/rick-project/workspace/overview/" target="_blank">
+              <span class="icon"><fa-icon [icon]="faBitbucket"></fa-icon></span>
+              <span>Bitbucket</span>
             </a>
+          </div>
         </div>
       </div>
     </div>
-</div> 
-
+  </nav>
+  

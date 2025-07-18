@@ -9,3 +9,8 @@
 //     margin-right: auto;
 //     width: 50%;
 // }
+
+.navbar-item img {
+    max-height: none !important; // Cancle the default limit size of Bulma
+    height: 56px;                // Name card size in mobile
+  }
